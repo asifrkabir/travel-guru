@@ -8,7 +8,7 @@ import './BookingPage.css';
 const BookingPage = () => {
     return (
         <div className="bg">
-            <NavigationBar></NavigationBar>
+            <NavigationBar invert={true}></NavigationBar>
             <div className="container">
                 <div className="row">
                     <div className="col-6">

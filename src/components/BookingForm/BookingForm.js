@@ -4,6 +4,7 @@ import './BookingForm.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
+
 const BookingForm = () => {
 
     const formStyle = {

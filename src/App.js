@@ -11,16 +11,18 @@ import {
 import NotFound from './components/NotFound/NotFound';
 import destination from './fakeData/destination';
 import BookingPage from './components/BookingPage/BookingPage';
+import Login from './components/Login/Login';
 
 export const DestinationContext = createContext();
 
 function App() {
 
   const [currentDestination, setCurrentDestination] = useState(destination[0]);
+  const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
 
-    <DestinationContext.Provider value={[currentDestination, setCurrentDestination]}>
+    <DestinationContext.Provider value={[currentDestination, setCurrentDestination, loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
           <Route path="/home">
@@ -28,6 +30,9 @@ function App() {
           </Route>
           <Route path="/booking">
             <BookingPage></BookingPage>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
           </Route>
 
 

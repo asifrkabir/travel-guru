@@ -7,7 +7,7 @@ import './Home.css';
 const Home = () => {
     return (
         <div className="bg">
-            <NavigationBar></NavigationBar>
+            <NavigationBar invert={true}></NavigationBar>
             <div className="container">
                 <div className="row">
                     <div className="col-6">
