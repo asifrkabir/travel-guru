@@ -1,0 +1,24 @@
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    justify-content: space-around;
+    flex-basis: auto;
+}
+
+.nav-link {
+    color: black;
+}
+
+.login-btn {
+    background-color: #F9A51A;
+    height: 2em;
+}
+
+.navbar a {
+    filter: invert(1);
+}
+
+.navbar .search-bar {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    color: #fff;
+}

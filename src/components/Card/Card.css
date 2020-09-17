@@ -1,0 +1,15 @@
+.card {
+    border-radius: 20px;
+    border: none;
+    height: 4em;
+}
+
+.card-container{
+    position: relative;
+}
+
+.card-text{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
