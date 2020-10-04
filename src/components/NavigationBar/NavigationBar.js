@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DestinationContext } from '../../App';
 import logo from '../../Logo.png';
 import './NavigationBar.css';
 

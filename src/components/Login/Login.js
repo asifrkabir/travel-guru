@@ -18,6 +18,9 @@ const Login = () => {
 
     const [newUser, setNewUser] = useState(true);
     const [loggedInUser, setLoggedInUser] = useContext(DestinationContext);
+    const history = useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: "/" } };
 
     const [user, setUser] = useState({
         isSignedIn: false,
@@ -35,6 +38,8 @@ const Login = () => {
         handleGoogleSignIn()
             .then(res => {
                 handleResponse(res, true)
+                history.replace(from);
+                
             })
     }
 
@@ -49,6 +54,7 @@ const Login = () => {
         handleFbSignIn()
             .then(res => {
                 handleResponse(res, true);
+                history.replace(from);
             })
     }
 
@@ -59,10 +65,6 @@ const Login = () => {
             history.replace(from);
         }
     }
-
-    const history = useHistory();
-    const location = useLocation();
-    let { from } = location.state || { from: { pathname: "/" } };
 
     const handleBlur = (event) => {
         let isFieldValid = true;
@@ -125,7 +127,7 @@ const Login = () => {
                                     <a href="">Forgot Password</a>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-warning" style={{ width: "100%", marginTop: "1em" }}>Login</button>
+                            <button type="submit" class="btn btn-warning" style={{ width: "100%", marginTop: "1em" }} onClick={() => setNewUser(!newUser)}>Login</button>
                             <p style={{ color: 'black', marginTop: '1em' }}>Don't have an account? <span><a href="#" onClick={() => setNewUser(!newUser)}>Create an account</a></span></p>
                         </form>
 
@@ -146,7 +148,7 @@ const Login = () => {
                             <div className="form-group">
                                 <input type="password" className="form-control" name="confirmPassword" placeholder="Confirm Password" onBlur={handleBlur} required />
                             </div>
-                            <button type="submit" class="btn btn-warning" style={{ width: "100%", marginTop: "1em" }}>Create an account</button>
+                            <button type="submit" class="btn btn-warning" style={{ width: "100%", marginTop: "1em" }} onClick={handleSubmit}>Create an account</button>
                             <p style={{ color: 'black', marginTop: '1em' }}>Already have an account? <span><a href="#" onClick={() => setNewUser(!newUser)}>Login</a></span></p>
                         </form>
 

@@ -12,6 +12,8 @@ import NotFound from './components/NotFound/NotFound';
 import destination from './fakeData/destination';
 import BookingPage from './components/BookingPage/BookingPage';
 import Login from './components/Login/Login';
+import SearchPage from './components/SearchPage/SearchPage';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const DestinationContext = createContext();
 
@@ -34,6 +36,9 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <PrivateRoute path="/search">
+            <SearchPage></SearchPage>
+          </PrivateRoute>
 
 
 

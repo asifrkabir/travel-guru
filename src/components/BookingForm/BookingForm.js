@@ -3,6 +3,7 @@ import { DestinationContext } from '../../App';
 import './BookingForm.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { Link } from 'react-router-dom';
 
 
 const BookingForm = () => {
@@ -40,7 +41,7 @@ const BookingForm = () => {
                         </DatePicker>
                     </div>
                 </div>
-                <button type="button" class="btn btn-warning" style={{width: "100%", marginTop: "1em"}}>Start Booking</button>
+                <Link to="/search"><button type="button" class="btn btn-warning" style={{width: "100%", marginTop: "1em"}}>Start Booking</button></Link>
             </form>
         </div>
     );

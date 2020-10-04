@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { DestinationContext } from '../../App';
 import './TextArea.css';
 
@@ -15,7 +16,7 @@ const TextArea = (textType) => {
                     ? <div>
                         <h1>{currentDestination.name}</h1>
                         <p>{currentDestination.description}</p>
-                        <button type="button" class="btn btn-warning">Booking</button>
+                        <Link to="/booking"><button type="button" class="btn btn-warning">Booking</button></Link>
                     </div>
                     : <div>
                         <h1>{currentDestination.name}</h1>
